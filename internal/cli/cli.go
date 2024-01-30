@@ -13,7 +13,7 @@ func printNDefinitions(r *dictionary.Response, n int) {
 		fmt.Printf("%d. %s\n", i+1, meaning.PartOfSpeech)
 		for j, definition := range meaning.Definitions {
 			if j < n-1 {
-				fmt.Printf("  - %s\n", definition.Definition)
+				fmt.Printf("  - %s\n", definition.Text)
 				if definition.Example != "" {
 					fmt.Printf("  Example: \"%s\"\n\n", definition.Example)
 				}

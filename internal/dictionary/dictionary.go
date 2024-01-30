@@ -7,22 +7,6 @@ import (
 	"net/http"
 )
 
-type Response struct {
-	Word      string     `json:"word"`
-	Phonetics []Phonetic `json:"phonetics"`
-	Meanings  []struct {
-		PartOfSpeech string `json:"partOfSpeech"`
-		Definitions  []struct {
-			Definition string `json:"definition"`
-			Example    string `json:"example"`
-		} `json:"definitions"`
-	} `json:"meanings"`
-}
-
-type Phonetic struct {
-	Text string `json:"text"`
-}
-
 /*
 fetchResponse returns the first response as struct from dictionaryapi.dev
 */
