@@ -8,7 +8,7 @@ import (
 )
 
 // Prints the first N definitions
-func PrintNDefinitions(r *dictionary.Response, n int) {
+func printNDefinitions(r *dictionary.Response, n int) {
 	for i, meaning := range r.Meanings {
 		fmt.Printf("%d. %s\n", i+1, meaning.PartOfSpeech)
 		for j, definition := range meaning.Definitions {
@@ -30,5 +30,5 @@ func Print(r *dictionary.Response) {
 	} else {
 		fmt.Println(word)
 	}
-	PrintNDefinitions(r, 3)
+	printNDefinitions(r, 3)
 }
